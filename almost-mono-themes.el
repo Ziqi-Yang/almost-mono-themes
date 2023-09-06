@@ -2,6 +2,7 @@
 
 ;; Copyright (C) 2019 - 2022 John Olsson
 
+;; Modifier: MeowKing<mr.meowking@anche.no>
 ;; Author: John Olsson <john@cryon.se>
 ;; Maintainer: John Olsson <john@cryon.se>
 ;; URL: https://github.com/cryon/almost-mono-themes
@@ -25,50 +26,54 @@
 
 ;;; Commentary:
 
+;; Changes made in this fork: waken the foreground color in black and gray themes,
+;; from #ffffff to #dddddd.
+;; ------------------------------------------------------------------------------
+
 ;; A suite of almost monochrome Emacs themes
 
 ;;; Code:
 
 (defconst almost-mono-themes-colors
   '((white . ((background . "#ffffff")
-	      (foreground . "#000000")
-	      (weak	  . "#888888")
-	      (weaker	  . "#dddddd")
-	      (weakest    . "#efefef")
-	      (highlight  . "#fda50f")
-	      (warning	  . "#ff0000")
-	      (success	  . "#00ff00")
-	      (string     . "#3c5e2b")))
+	            (foreground . "#000000")
+	            (weak	  . "#888888")
+	            (weaker	  . "#dddddd")
+	            (weakest    . "#efefef")
+	            (highlight  . "#fda50f")
+	            (warning	  . "#ff0000")
+	            (success	  . "#00ff00")
+	            (string     . "#3c5e2b")))
 
     (black . ((background . "#000000")
-	      (foreground . "#ffffff")
-	      (weak	  . "#aaaaaa")
-	      (weaker	  . "#666666")
-	      (weakest	  . "#222222")
-	      (highlight  . "#fda50f")
-	      (warning	  . "#ff0000")
-	      (success	  . "#00ff00")
-	      (string     . "#a7bca4")))
+	            (foreground . "#dddddd")
+	            (weak	  . "#aaaaaa")
+	            (weaker	  . "#666666")
+	            (weakest	  . "#222222")
+	            (highlight  . "#fda50f")
+	            (warning	  . "#ff0000")
+	            (success	  . "#00ff00")
+	            (string     . "#a7bca4")))
 
     (gray .  ((background . "#2b2b2b")
-	      (foreground . "#ffffff")
-	      (weak	  . "#aaaaaa")
-	      (weaker	  . "#666666")
-	      (weakest	  . "#222222")
-	      (highlight  . "#fda50f")
-	      (warning	  . "#ff0000")
-	      (success	  . "#00ff00")
-	      (string     . "#a7bca4")))
+	            (foreground . "#dddddd")
+	            (weak	  . "#aaaaaa")
+	            (weaker	  . "#666666")
+	            (weakest	  . "#222222")
+	            (highlight  . "#fda50f")
+	            (warning	  . "#ff0000")
+	            (success	  . "#00ff00")
+	            (string     . "#a7bca4")))
 
     (cream . ((background . "#f0e5da")
-	      (foreground . "#000000")
-	      (weak	  . "#7d7165")
-	      (weaker	  . "#c4baaf")
-	      (weakest    . "#dbd0c5")
-	      (highlight  . "#fda50f")
-	      (warning	  . "#ff0000")
-	      (success	  . "#00ff00")
-	      (string     . "#3c5e2b")))))
+	            (foreground . "#000000")
+	            (weak	  . "#7d7165")
+	            (weaker	  . "#c4baaf")
+	            (weakest    . "#dbd0c5")
+	            (highlight  . "#fda50f")
+	            (warning	  . "#ff0000")
+	            (success	  . "#00ff00")
+	            (string     . "#3c5e2b")))))
 
 (defmacro almost-mono-themes--variant-with-colors (variant &rest body)
   "Execute BODY in a scope where the different colors for given VARIANT is bound."
